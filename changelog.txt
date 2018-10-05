@@ -1,0 +1,12 @@
+Version 0.2.7			21 March 2018
+------------------------------------------------
+Localisation and recipe order imrovements.
+
+Version 0.2.6			18 December 2017
+------------------------------------------------
+Some unused textures compressed for space economy.
+
+Version 0.2.5			18 Decemder 2017
+------------------------------------------------
+Updated for 0.16
+Added changelog.txt

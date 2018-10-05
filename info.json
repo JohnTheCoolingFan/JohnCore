@@ -1,0 +1,10 @@
+{
+"name": "JohnCore",
+"version": "0.2.7",
+"date": "2018-03-21",
+"title": "John's Core",
+"author": "JohnTheCoolingFan",
+"factorio_version": "0.16",
+"dependencies": ["base >= 0.16.0"],
+"description": "Basic core for some JohnTheCF's mod."
+}
