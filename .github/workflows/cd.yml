@@ -91,4 +91,4 @@ jobs:
           echo "MODFILENAME=$MFNAME" >> $GITHUB_ENV
           
       - name: Upload file to mod portal
-        run: curl -X POST -d mod="$(jq -r .name info.json)" -H "Authorization: Bearer ${{ secrets.factorio_token }}" https://mods.factorio.com/api/v2/mods/releases/init_upload | jq -r ".upload_url" | xargs curl -X POST -s -F "file=@$MODFILENAME"
+        run: curl -X POST -d mod="$(jq -r .name info.json)" -H "Authorization:Bearer ${{ secrets.factorio_token }}" https://mods.factorio.com/api/v2/mods/releases/init_upload | jq -r ".upload_url" | xargs curl -X POST -s -F "file=@$MODFILENAME"
