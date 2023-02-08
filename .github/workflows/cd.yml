@@ -28,6 +28,9 @@ jobs:
       - name: Pack a mod
         run: rfmp --no-clean --install-dir .
         
+      - name: List files
+        run: ls -R
+        
       - name: Upload packed mod as an artifact
         uses: actions/upload-artifact@v3.1.2
         with:
