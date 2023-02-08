@@ -21,14 +21,11 @@ jobs:
       
       - name: Get full mod file name
         run: |
-          MFNAME=$(jq '.name + "_" + .version + ".zip"' info.json)
+          MFNAME=$(jq -r '.name + "_" + .version + ".zip"' info.json)
           echo "MODFILENAME=$MFNAME" >> $GITHUB_ENV
 
       - name: Pack a mod
         run: rfmp --no-clean --install-dir .
-        
-      - name: List files
-        run: ls -R
         
       - name: Upload packed mod as an artifact
         uses: actions/upload-artifact@v3.1.2
@@ -60,7 +57,7 @@ jobs:
       
       - name: Set up environment and file names
         run: |
-          MFNAME=$(jq '.name + "_" + .version + ".zip"' info.json)
+          MFNAME=$(jq -r '.name + "_" + .version + ".zip"' info.json)
           echo "MODFILENAME=$MFNAME" >> $GITHUB_ENV
       
       - name: Upload file to release
