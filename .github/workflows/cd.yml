@@ -14,10 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Install rfmp
-        uses: baptiste0928/cargo-install@v1.3.0
+      - name: Download rfmp
+        uses: robinraju/release-downloader@v1.7
         with:
-          crate: rfmp
+          repository: JohnTheCoolingFan/rfmp
+          fileName: rfmp-linux
       
       - name: Get full mod file name
         run: |
@@ -25,7 +26,9 @@ jobs:
           echo "MODFILENAME=$MFNAME" >> $GITHUB_ENV
 
       - name: Pack a mod
-        run: rfmp --no-clean --install-dir .
+        run: |
+          chmod +x ./rfmp-linux
+          ./rfmp-linux --no-clean --install-dir .
         
       - name: Upload packed mod as an artifact
         uses: actions/upload-artifact@v3.1.2
