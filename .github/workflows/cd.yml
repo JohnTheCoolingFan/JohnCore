@@ -65,7 +65,7 @@ jobs:
           echo "MODFILENAME=$MFNAME" >> $GITHUB_ENV
           
       - name: Post announcement in Discord
-        run: curl -H 'Content-Type'':'' application/json' -d '{"username"'':''"'"$(jq -r .name info.json)"'", "content"'':''"'"$(jq -r '"\(.name) \(.version)"' info.json)" has released'"}' ${{ secrets.DISCORD_WEB_HOOK }}
+        run: curl -H 'Content-Type'':'' application/json' -d "$(echo '{"username"'':''"'"$(jq -r .name info.json)"'", "content"'':''"'"$(jq -r '"\(.name) \(.version)"' info.json)" has released'"}' | jq)" ${{ secrets.DISCORD_WEB_HOOK }}
       
       - name: Upload file to release
         uses: softprops/action-gh-release@v1
