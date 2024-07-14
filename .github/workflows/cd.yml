@@ -37,11 +37,11 @@ jobs:
           files: ${{ env.MODFILENAME }}
 
       - name: Publish mod on mod portal
-        uses: JohnTheCoolingFan/factorio-mod-publish@v3
+        uses: JohnTheCoolingFan/factorio-mod-publish@v1
         with:
           factorio_token: ${{ secrets.FACTORIO_TOKEN }}
 
       - name: Send notification on Discord
-        uses: JohnTheCoolingFan/factorio-mod-discord-announce@v12
+        uses: JohnTheCoolingFan/factorio-mod-discord-announce@v1
         with:
           discord_webhook: ${{ secrets.DISCORD_NEW_WEBHOOK }}
