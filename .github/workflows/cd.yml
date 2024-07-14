@@ -42,6 +42,6 @@ jobs:
           factorio_token: ${{ secrets.FACTORIO_TOKEN }}
 
       - name: Send notification on Discord
-        uses: JohnTheCoolingFan/factorio-mod-discord-announce@v8
+        uses: JohnTheCoolingFan/factorio-mod-discord-announce@v9
         with:
           discord_webhook: ${{ secrets.DISCORD_NEW_WEBHOOK }}
