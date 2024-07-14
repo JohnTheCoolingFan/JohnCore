@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
       - name: Download rfmp
-        uses: robinraju/release-downloader@v1.7
+        uses: robinraju/release-downloader@v1
         with:
           repository: JohnTheCoolingFan/rfmp
           fileName: rfmp-linux
@@ -32,7 +32,7 @@ jobs:
           ./rfmp-linux --no-clean --install-dir .
       
       - name: Upload file to release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           files: ${{ env.MODFILENAME }}
 
