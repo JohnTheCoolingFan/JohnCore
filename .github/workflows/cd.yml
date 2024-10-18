@@ -48,7 +48,7 @@ jobs:
           mod_name: JohnCore
           description_file: README.md
 
-      - name: Send notification on Discord
-        uses: JohnTheCoolingFan/factorio-mod-discord-announce@v1
-        with:
-          discord_webhook: ${{ secrets.DISCORD_NEW_WEBHOOK }}
+      #- name: Send notification on Discord
+        #uses: JohnTheCoolingFan/factorio-mod-discord-announce@v1
+        #with:
+          #discord_webhook: ${{ secrets.DISCORD_NEW_WEBHOOK }}
