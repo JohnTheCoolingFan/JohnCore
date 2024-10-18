@@ -41,6 +41,13 @@ jobs:
         with:
           factorio_token: ${{ secrets.FACTORIO_TOKEN }}
 
+      - name: Update mod description
+        uses: JohnTheCoolingFan/factorio-mod-details@5221ca8
+        with:
+          factorio_token: ${{ secrets.FACTORIO_TOKEN }}
+          mod_name: JohnCore
+          description_file: README.md
+
       - name: Send notification on Discord
         uses: JohnTheCoolingFan/factorio-mod-discord-announce@v1
         with:
