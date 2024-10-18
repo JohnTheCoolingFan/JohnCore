@@ -42,7 +42,7 @@ jobs:
           factorio_token: ${{ secrets.FACTORIO_TOKEN }}
 
       - name: Update mod description
-        uses: JohnTheCoolingFan/factorio-mod-details@aed6ab694b3ef1adec6a8a51c54655f1a33e8eb9
+        uses: JohnTheCoolingFan/factorio-mod-details@a6716ed1ff684199ded879b4d19d35a0e6602e2e
         with:
           factorio_token: ${{ secrets.FACTORIO_TOKEN }}
           mod_name: JohnCore
